@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Bar - Discover Amazing Cocktails</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="maroon-background-top">
+    <div class="maroon-background-top" id="home">
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-overlay" id="nav-overlay"></div>
+                <div class="navbar-container">
+                    <div class="container">
+                        <div class="nav-wrapper">
+                            <h1 class="logo">COCKTAIL BAR</h1>
+                            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <ul class="nav-menu" id="nav-menu">
+                                <li class="nav-item dropdown">
+                                    <a href="#ingredients" class="nav-link dropdown-toggle">Ingredients <span class="dropdown-arrow">▼</span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-link" data-ingredient="vodka">Vodka</a></li>
+                                        <li><a href="#" class="dropdown-link" data-ingredient="rum">Rum</a></li>
+                                        <li><a href="#" class="dropdown-link" data-ingredient="gin">Gin</a></li>
+                                        <li><a href="#" class="dropdown-link" data-ingredient="tequila">Tequila</a></li>
+                                        <li><a href="#" class="dropdown-link" data-ingredient="whiskey">Whiskey</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#search" class="nav-link">Search</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#cocktails" class="nav-link">Cocktails</a>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </nav>
+        </header>
+        <div class="maroon-background">
+            <div class="container">
+                <!-- Hero Section -->
+                <section class="hero-section">
+                    <div class="hero-content">
+                        <div class="hero-text" data-aos="fade-right" data-aos-duration="800">
+                            <h2 class="hero-title">FIND YOUR<br>PERFECT<br>COCKTAIL</h2>
+                            <div class="hero-description">
+                                <p>The world's best cocktail resource.</p>
+                                <p>Discover new tastes and drinks for every occasion.</p>
+                                <p class="age-notice">18+® Drink responsibly.</p>
+                            </div>
+                        </div>
+                        <div class="hero-image" data-aos="fade-left" data-aos-duration="800">
+                            <img src="https://ik.imagekit.io/gd2om19h3p/coctel/(2)%20Instagram.jpg" alt="Cocktail" class="hero-image-img">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Popular Ingredients Section -->
+            <section class="popular-ingredients" id="ingredients">
+                <h2 class="ingredients-title" data-aos="fade-up" data-aos-duration="600">POPULAR INGREDIENTS</h2>
+                <div class="ingredients-container" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+                    <div class="ingredient-item">VODKA</div>
+                    <div class="ingredient-item">RUM</div>
+                    <div class="ingredient-item">GIN</div>
+                    <div class="ingredient-item">TEQUILA</div>
+                    <div class="ingredient-item">WHISKEY</div>
+                </div>
+            </section>
+
+            <!-- Search Section -->
+            <section class="search-section" id="search">
+                <div class="search-container">
+                    <div class="search-input-container">
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            class="search-input" 
+                            placeholder="SEARCH..."
+                            autocomplete="off"
+                        >
+                        <button id="search-btn" class="search-btn">SEARCH</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading Indicator -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Loading cocktails...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="error-message" class="error-message hidden"></div>
+
+            <!-- Cocktails List -->
+            <section id="cocktails" class="cocktails-section hidden">
+                <h2 id="section-title" class="section-title"></h2>
+                <div id="cocktails-grid" class="cocktails-grid"></div>
+            </section>
+
+            <!-- Cocktail Detail Modal -->
+            <div id="cocktail-modal" class="modal hidden">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <button class="modal-close" id="modal-close">&times;</button>
+                    <div id="modal-body" class="modal-body"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Powered by <a href="https://www.thecocktaildb.com/" target="_blank">TheCocktailDB</a></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
